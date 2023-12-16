@@ -1,14 +1,5 @@
-# PyTorch'ü yüklemek için
-# Eğer CUDA uyumlu bir GPU'nuz varsa, CUDA destekli sürümü yüklemek daha hızlı olacaktır.
-# Ancak CUDA kullanmak zorunlu değildir, sadece hız artışı sağlar.
-# İlgili sürümü https://pytorch.org/get-started/locally/ adresinden kontrol edebilirsiniz.
 
-# Örnek olarak, CUDA destekli sürümü yüklemek için:
-# !pip install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio===0.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
-# Eğer CUDA kullanmak istemiyorsanız, sadece şu şekilde yükleyebilirsiniz:
-# !pip install torch==1.10.0 torchvision==0.11.1 torchaudio===0.10.0
-# Gerekli kütüphaneleri yüklemek
-!pip install diffusers transformers accelerate scipy safetensors
+# Eğer yüklü değilse -- !pip install diffusers transformers accelerate scipy safetensors
 from PIL import Image
 from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
 from deep_translator import GoogleTranslator
@@ -30,7 +21,7 @@ if prompt1:
     im1.show()
 else:
     print("Lütfen geçerli bir açıklama girin.")
-    !pip install diffusers transformers accelerate scipy safetensors
+    
     from PIL import Image
     from diffusers import StableDiffusionPipeline, EulerDiscreteScheduler
     from deep_translator import GoogleTranslator
